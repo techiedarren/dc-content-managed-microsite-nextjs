@@ -1,0 +1,5 @@
+{
+    "body": "../content-schemas/link.json",
+    "schemaId": "https://anyafinn.dev/link.json",
+    "validationLevel": "CONTENT_TYPE"
+}

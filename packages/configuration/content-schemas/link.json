@@ -1,0 +1,76 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://anyafinn.dev/link.json",
+	"title": "Link",
+	"description": "Link",
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+
+	"trait:filterable": {
+		"filterBy": [
+			{
+				"paths": [
+					"/active"
+				]	
+			}
+		]
+	},
+
+	"type": "object",
+	"properties": {
+		"_meta": {
+			"type": "object",
+			"title": "Link",
+			"properties": {
+				"deliveryKey": {
+					"type": "string",
+					"title": "Path"
+				}
+			}
+		},
+		"active": {
+			"type": "boolean",
+			"title": "Active"
+		},
+		"title": {
+			"type": "string",
+			"title": "Title"
+		},
+		"content": {
+			"type": "object",
+			"title": "Content",
+			"properties": {
+				"page": {
+					"title": "Page",
+					"allOf": [
+						{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-reference" },
+						{
+							"properties": {
+								"contentType": {
+									"enum": [
+										"https://anyafinn.dev/page.json"
+									]
+								}
+							}
+						}
+					]
+				},
+				"redirect": {
+					"title": "Redirect",
+					"properties": {
+						"url": {
+							"type": "string",
+							"title": "Redirect URL"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+	},
+	"propertyOrder": []
+}
