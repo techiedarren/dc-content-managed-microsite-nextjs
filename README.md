@@ -1,4 +1,4 @@
-# dc-content-managed-pwa-nextjs
+# dc-content-managed-microsite-nextjs
 
 This project is a sample React / NextJS application using [Amplience Dynamic Content](https://amplience.com/dynamic-content) for content management.
 
